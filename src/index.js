@@ -29,13 +29,13 @@ const reducer = (state, action) => {
 }
 
 // const store = createStore(reducer);
-const store = configureStore({reducer, preloadedState: initialState.value});
+const store = configureStore({reducer, preloadedState: initialState});
 
 
-document.getElementById('counter').textContent = store.getState();
+document.getElementById('counter').textContent = store.getState().value;
 
 const update = () => {
-    document.getElementById('counter').textContent = store.getState();
+    document.getElementById('counter').textContent = store.getState().value;
 }
 
 store.subscribe(update);
