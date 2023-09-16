@@ -5,7 +5,6 @@ import { configureStore } from '@reduxjs/toolkit';
 import reducer from './reducer';
 import { Provider } from 'react-redux';
 
-import Counter from './components/Counter';
 import App from './components/App';
 
 const store = configureStore({reducer});
